@@ -1,3 +1,4 @@
+//Test comment
 const zodiacSign = require('get-zodiac-sign');
 var myZodiacSign1 = zodiacSign(1,7);
 var myZodiacSign2 = zodiacSign(12,1);
