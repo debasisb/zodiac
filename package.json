@@ -10,8 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "acorn": "latest",
+    "express": "^4.17.1",
     "get-zodiac-sign": "^1.0.3",
-    "minimist":"latest",
-    "acorn": "latest"
+    "minimist": "latest"
   }
 }
