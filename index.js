@@ -1,8 +1,10 @@
 const zodiacSign = require('get-zodiac-sign');
 var myZodiacSign1 = zodiacSign(3,13);
-var myZodiacSign2 = zodiacSign(2,18);
+var myZodiacSign2 = zodiacSign(11,12);
+var myZodiacSign3 = zodiacSign(5,20);
 console.log(myZodiacSign1);
 console.log(myZodiacSign2);
+console.log(myZodiacSign3);
 
 //use the fs function that comes with node
 const fs = require("fs");
@@ -20,10 +22,11 @@ const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   res.end("My Zodiac Sign is " + myZodiacSign1);
   res.end("My Daughter's Zodiac Sign is " + myZodiacSign2);
+  res.end("My Son's Zodiac Sign is " + myZodiacSign3);
     
 });
 
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
-  console.log('My Zodiac Sign is ' + myZodiacSign1 + 'and daugther is ' + myZodiacSign2)
+  console.log('My Zodiac Sign is ' + myZodiacSign1 + 'and daugther is ' + myZodiacSign2 + 'and son is' + myZodiacSign3)
 });
