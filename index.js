@@ -15,13 +15,13 @@ const http = require('http');
 const hostname = '0.0.0.0';
 const port = 3000;
 
-// not sure why the 2nd res.end doesn't send the message to the page
+// res.write does the job and adding the carriage return in the string works also
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end("My Zodiac Sign is " + myZodiacSign1 + " and my Daughter's Zodiac Sign is " + myZodiacSign2);
-  //res.end("My Daughter's Zodiac Sign is " + myZodiacSign2);
-    
+  res.write("My Zodiac Sign is " + myZodiacSign1 + "\n");
+  res.write("My Daughter's Zodiac Sign is " + myZodiacSign2);
+  res.end(); 
 });
 
 server.listen(port, hostname, () => {
