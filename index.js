@@ -5,6 +5,7 @@ var myZodiacSign3 = zodiacSign(8,30);
 console.log(myZodiacSign1);
 console.log(myZodiacSign2);
 console.log(myZodiacSign3);
+//This is a comment
 
 //use the fs function that comes with node
 const fs = require("fs");
